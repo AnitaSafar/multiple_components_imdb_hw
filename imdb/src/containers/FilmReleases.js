@@ -3,6 +3,10 @@ import FilmList from "../components/FilmList";
 
 const FilmReleases = () => {
 
+    const moreFilms = () => {
+        window.location.href="https://www.imdb.com/calendar/?region=gb";
+    };
+
     const [films, setFilms] = useState(
         [
             {
@@ -39,6 +43,7 @@ const FilmReleases = () => {
         <>
             <h1>Upcoming Film Releases for UK</h1>
             <FilmList films={films}/>
+            <button onClick={() => {moreFilms()}}>View more upcoming releases >></button>
         </>
     );
 };
